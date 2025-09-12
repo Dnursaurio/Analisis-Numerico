@@ -52,9 +52,23 @@ en ese caso usar:
     - a=[1,2,3]
     - b=[2,4,6]
     - c=[x+y for x.y in zip(a,b)]
+    - en nmupy para declarar una lista usar np.array([1,2,3]) 
     OJO:
     La función zip() en Python se usa para combinar elementos de dos o más iterables 
     (como listas o tuplas) en un único iterable de tuplas, emparejando los elementos en la misma posición.
 
 "Valor absoluto"
 - np.abs(x): valor absoluto de x
+
+"Declaracion de funciones en python"
+-   usar unicamente def (palabra clave para declarar fuciones en python):
+    - seria asi:
+
+        def "Nombre de la funcion (sin comillas ni espacios)"(parametros):
+            definición de la funcion (que quieres que hga esta funcion)
+
+"Libreria grafica matplotlib.pyplot de python"
+-   Esta libreria pueds intalarla abriendo el cmd o un terminal en Visual Studio y copiando el siguiente comando:
+    -   pip install matplotlib
+-   Luego en un nuevo scrpit de python:
+    -   import matplotlib.pyplot as plt
