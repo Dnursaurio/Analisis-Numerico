@@ -68,7 +68,49 @@ en ese caso usar:
             definición de la funcion (que quieres que hga esta funcion)
 
 "Libreria grafica matplotlib.pyplot de python"
--   Esta libreria pueds intalarla abriendo el cmd o un terminal en Visual Studio y copiando el siguiente comando:
+-   Esta libreria puedes intalarla abriendo el cmd o un terminal en Visual Studio y copiando el siguiente comando:
     -   pip install matplotlib
 -   Luego en un nuevo scrpit de python:
     -   import matplotlib.pyplot as plt
+
+"Matrices con python numpy"
+-   para delcarar una matriz con numpy tenemos que declara runa array:
+    -   A = np.array([1,2,3],[4,5,6])
+        print("matriz A",A)
+    -   para matrices con 0's usar:
+        -   np.zeros((n_filas,n_columnas))
+    -   matriz de unos:
+        -   np.ones((n_filas,n_columnas))
+    - matriz de numeros aeatorios:
+        -   np.random.rand(n_filas,n_columnas)
+        -   Si quieres añadirles un rango usa randint:
+            -   np.random.randint(indice_inicial, indice final + 1, size=(n_filas,n_columnas))
+    
+    #   Indexacion de matrices
+    Ponte que declaramos una matriz:
+        -   B = np.array([[1,2,3],[4,5,6]]) <br>
+                Esto genera algo asi:
+                    -   [[1,2,3]<br>[4,5,6]]<br>
+                para acceder a un elemento debemos recorda que cada elemntos del array comienza en 0
+                entonces para acceder decimos:
+                -   print(B[0,]), esto devolveria toda la fila 0:
+                    -   1,2,3
+                -   pero si hacemos algo asi:
+                    -   print(B[0,0]), esto devuelve el primer elementos de la fila 0:
+                        -   1
+
+"Operaciones con matrices"
+    #   Suma de matrices
+            -   Del txeto anterior usemos A y B:<br>
+            para operar esas matrices unicamente usar <br>
+            print(A+B) 
+    #   Producto K con una Matriz
+            -   Puedes hacer algo como <br>
+            print(3*B)<br>
+            esto te devolvera <br>
+            [[3,6,9]<br>
+            [12,15,18]]
+    OJO: para multiplicar matrices ocn numpy <color=red>NO</color> usar print(A*B), esto no multiplica bien
+    #   Producto de matrices
+            -   Para hace esto correctamente unicmante usar @ en vez de *<br>
+            print(A@B) 
