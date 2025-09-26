@@ -1,92 +1,92 @@
 # Analisis-Numerico
 
-primero importamos la libreria numpy
-import numpy as np
+    primero importamos la libreria numpy
+    import numpy as np
 
-"Potenciacion"
-- Para poder hacer potenciacion:
-    - np.power(base,exponente)
-- normalmente en python es:
-    - base**exponente
+    "Potenciacion"
+    - Para poder hacer potenciacion:
+        - np.power(base,exponente)
+    - normalmente en python es:
+        - base**exponente
 
-"Raiz"
-- en numpy seria:
-    - np.sqrt(x) [equivalente a la raiz cuadrada de toda la vida]
-- raiz cubica:
-    - np.cbrt(x)
-- raiz n:
-x**(1/n) n es el indice de la raiz
+    "Raiz"
+    - en numpy seria:
+        - np.sqrt(x) [equivalente a la raiz cuadrada de toda la vida]
+    - raiz cubica:
+        - np.cbrt(x)
+    - raiz n:
+    x**(1/n) n es el indice de la raiz
 
-"Contantes principales en numpy"
-- np.pi: devuelve el valor de pi (3.14159...)
-- np.e: devuekve el valor de e (2.71828...)
-- np.inf: valores infinutos positivos
-- -np.inf: valores infinitos negativos
+    "Contantes principales en numpy"
+    - np.pi: devuelve el valor de pi (3.14159...)
+    - np.e: devuekve el valor de e (2.71828...)
+    - np.inf: valores infinutos positivos
+    - -np.inf: valores infinitos negativos
 
-"Funciones trigronometricas en numpy"
-- np.sin(x): seno de x (en radianes)
-- np.cos(x): coseno de x (en radianes)
-- np.tan(x): tangente de x (en radianes)
+    "Funciones trigronometricas en numpy"
+    - np.sin(x): seno de x (en radianes)
+    - np.cos(x): coseno de x (en radianes)
+    - np.tan(x): tangente de x (en radianes)
 
-OJO: en nmupy no existe contangente, secante, cosecante
-en ese caso usar:
-- 1/np.tan(x) [contangente]
-- 1/np.cos(x) [secante]
-- 1/np.sen(x) [cosecante] 
+    OJO: en nmupy no existe contangente, secante, cosecante
+    en ese caso usar:
+    - 1/np.tan(x) [contangente]
+    - 1/np.cos(x) [secante]
+    - 1/np.sen(x) [cosecante] 
 
-"Conversion entre grados y radianes"
-- np.radians(grados): convierte grados a radianes
-- no.degrees(radianes): convierte radianes a grados
+    "Conversion entre grados y radianes"
+    - np.radians(grados): convierte grados a radianes
+    - no.degrees(radianes): convierte radianes a grados
 
-"Funciones logaritmos en numpy"
-- np.log(x): logaritmo natural de base e
-- np.log2(x): logaritmo en base 2
-- np.log10(x): logaritmo en base 10
-- np.log(x)/np.log(b): logaritmo en cualquier base b
+    "Funciones logaritmos en numpy"
+    - np.log(x): logaritmo natural de base e
+    - np.log2(x): logaritmo en base 2
+    - np.log10(x): logaritmo en base 10
+    - np.log(x)/np.log(b): logaritmo en cualquier base b
 
-"Exponenciales"
-- np.exp(x) -> calcula un e a la x (es como decir np.power(np.e,exponente))
+    "Exponenciales"
+    - np.exp(x) -> calcula un e a la x (es como decir np.power(np.e,exponente))
 
-"Listas en python"
-- ejemplo:
-    - a=[1,2,3]
-    - b=[2,4,6]
-    - c=[x+y for x.y in zip(a,b)]
-    - en nmupy para declarar una lista usar np.array([1,2,3]) 
-    OJO:
-    La función zip() en Python se usa para combinar elementos de dos o más iterables 
-    (como listas o tuplas) en un único iterable de tuplas, emparejando los elementos en la misma posición.
+    "Listas en python"
+    - ejemplo:
+        - a=[1,2,3]
+        - b=[2,4,6]
+        - c=[x+y for x.y in zip(a,b)]
+        - en nmupy para declarar una lista usar np.array([1,2,3]) 
+        OJO:
+        La función zip() en Python se usa para combinar elementos de dos o más iterables 
+        (como listas o tuplas) en un único iterable de tuplas, emparejando los elementos en la misma posición.
 
-"Valor absoluto"
-- np.abs(x): valor absoluto de x
+    "Valor absoluto"
+    - np.abs(x): valor absoluto de x
 
-"Declaracion de funciones en python"
--   usar unicamente def (palabra clave para declarar fuciones en python):
-    - seria asi:
+    "Declaracion de funciones en python"
+    -   usar unicamente def (palabra clave para declarar fuciones en python):
+        - seria asi:
 
-        def "Nombre de la funcion (sin comillas ni espacios)"(parametros):
-            definición de la funcion (que quieres que hga esta funcion)
+            def "Nombre de la funcion (sin comillas ni espacios)"(parametros):
+                definición de la funcion (que quieres que hga esta funcion)
 
-"Libreria grafica matplotlib.pyplot de python"
--   Esta libreria puedes intalarla abriendo el cmd o un terminal en Visual Studio y copiando el siguiente comando:
-    -   pip install matplotlib
--   Luego en un nuevo scrpit de python:
-    -   import matplotlib.pyplot as plt
+    "Libreria grafica matplotlib.pyplot de python"
+    -   Esta libreria puedes intalarla abriendo el cmd o un terminal en Visual Studio y copiando el siguiente comando:
+        -   pip install matplotlib
+    -   Luego en un nuevo scrpit de python:
+        -   import matplotlib.pyplot as plt
 
-"Matrices con python numpy"
--   para delcarar una matriz con numpy tenemos que declara runa array:
-    -   A = np.array([1,2,3],[4,5,6])
-        print("matriz A",A)
-    -   para matrices con 0's usar:
-        -   np.zeros((n_filas,n_columnas))
-    -   matriz de unos:
-        -   np.ones((n_filas,n_columnas))
-    - matriz de numeros aeatorios:
-        -   np.random.rand(n_filas,n_columnas)
-        -   Si quieres añadirles un rango usa randint:
-            -   np.random.randint(indice_inicial, indice final + 1, size=(n_filas,n_columnas))
+    "Matrices con python numpy"
+    -   para delcarar una matriz con numpy tenemos que declara runa array:
+        -   A = np.array([1,2,3],[4,5,6])
+            print("matriz A",A)
+        -   para matrices con 0's usar:
+            -   np.zeros((n_filas,n_columnas))
+        -   matriz de unos:
+            -   np.ones((n_filas,n_columnas))
+        - matriz de numeros aeatorios:
+            -   np.random.rand(n_filas,n_columnas)
+            -   Si quieres añadirles un rango usa randint:
+                -   np.random.randint(indice_inicial, indice final + 1, size=(n_filas,n_columnas))
     
-    #   Indexacion de matrices
+#   Indexacion de matrices
     Ponte que declaramos una matriz:
         -   B = np.array([[1,2,3],[4,5,6]]) <br>
                 Esto genera algo asi:
@@ -99,18 +99,18 @@ en ese caso usar:
                     -   print(B[0,0]), esto devuelve el primer elementos de la fila 0:
                         -   1
 
-"Operaciones con matrices"<br>
-    #   Suma de matrices
-            -   Del txeto anterior usemos A y B:<br>
+    "Operaciones con matrices"<br>
+#   Suma de matrices
+            -   Del texto anterior usemos A y B:<br>
             para operar esas matrices unicamente usar <br>
             print(A+B) 
-    #   Producto K con una Matriz
+#   Producto K con una Matriz
             -   Puedes hacer algo como <br>
             print(3*B)<br>
             esto te devolvera <br>
             [[3,6,9]<br>
             [12,15,18]]
     OJO: para multiplicar matrices ocn numpy <color=red>NO</color> usar print(A*B), esto no multiplica bien
-    #   Producto de matrices
+#   Producto de matrices
             -   Para hace esto correctamente unicmante usar @ en vez de *<br>
             print(A@B) 
