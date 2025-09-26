@@ -81,7 +81,7 @@
             -   np.zeros((n_filas,n_columnas))
         -   matriz de unos:
             -   np.ones((n_filas,n_columnas))
-        - matriz de numeros aeatorios:
+        - matriz de numeros aleatorios:
             -   np.random.rand(n_filas,n_columnas)
             -   Si quieres añadirles un rango usa randint:
                 -   np.random.randint(indice_inicial, indice final + 1, size=(n_filas,n_columnas))
@@ -112,5 +112,15 @@
             [12,15,18]]
     OJO: para multiplicar matrices ocn numpy <color=red>NO</color> usar print(A*B), esto no multiplica bien
 #   Producto de matrices
-            -   Para hace esto correctamente unicmante usar @ en vez de *<br>
-            print(A@B) 
+            -   Para hace esto correctamente unicamente usar @ en vez de *<br>
+            print(A@B)
+#   Transpuesta de una matriz
+            -   Para esto usar A.T
+#   Inversa de una Matriz
+    np.linalg.inv(A)
+#   Determinante de una Matriz
+    np.linalg.det(A)
+
+Consejo <br>
+-   Para reondear en nmupy:
+    -   Usar np.round(El numero, la cantidad de decimales a redondear)
