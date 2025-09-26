@@ -99,7 +99,7 @@ en ese caso usar:
                     -   print(B[0,0]), esto devuelve el primer elementos de la fila 0:
                         -   1
 
-"Operaciones con matrices"
+"Operaciones con matrices"<br>
     #   Suma de matrices
             -   Del txeto anterior usemos A y B:<br>
             para operar esas matrices unicamente usar <br>
