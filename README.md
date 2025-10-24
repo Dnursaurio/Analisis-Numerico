@@ -1,11 +1,11 @@
 # Analisis-Numerico
 
-    primero importamos la libreria numpy
-    import numpy as np
+primero importamos la libreria numpy
+import numpy as np
 
-    "Potenciacion"
-    - Para poder hacer potenciacion:
-        - np.power(base,exponente)
+"Potenciacion"
+- Para poder hacer potenciacion:
+    - np.power(base,exponente)
     - normalmente en python es:
         - base**exponente
 
@@ -88,39 +88,57 @@
     
 #   Indexacion de matrices
     Ponte que declaramos una matriz:
-        -   B = np.array([[1,2,3],[4,5,6]]) <br>
-                Esto genera algo asi:
-                    -   [[1,2,3]<br>[4,5,6]]<br>
-                para acceder a un elemento debemos recorda que cada elemntos del array comienza en 0
-                entonces para acceder decimos:
-                -   print(B[0,]), esto devolveria toda la fila 0:
-                    -   1,2,3
-                -   pero si hacemos algo asi:
-                    -   print(B[0,0]), esto devuelve el primer elementos de la fila 0:
-                        -   1
+-   B = np.array([[1,2,3],[4,5,6]]) <br>
+    Esto genera algo asi:
+-   [[1,2,3]<br>[4,5,6]]<br>
+    para acceder a un elemento debemos recorda que cada elemntos del array comienza en 0
+    entonces para acceder decimos:
+-   print(B[0,]), esto devolveria toda la fila 0: 1,2,3
+-   pero si hacemos algo asi: <br>
+    print(B[0,0]), esto devuelve el primer elementos de la fila 0: 1
 
     "Operaciones con matrices"<br>
 #   Suma de matrices
-            -   Del texto anterior usemos A y B:<br>
-            para operar esas matrices unicamente usar <br>
-            print(A+B) 
+-   Del texto anterior usemos A y B:<br>
+    para operar esas matrices unicamente usar <br>
+    print(A+B) 
 #   Producto K con una Matriz
-            -   Puedes hacer algo como <br>
-            print(3*B)<br>
-            esto te devolvera <br>
-            [[3,6,9]<br>
-            [12,15,18]]
-    OJO: para multiplicar matrices ocn numpy <color=red>NO</color> usar print(A*B), esto no multiplica bien
+-   Puedes hacer algo como <br>
+    print(3*B)<br>
+    esto te devolvera <br>
+    [[3,6,9]<br>
+    [12,15,18]]
+    OJO: para multiplicar matrices con numpy NO usar print(A*B), esto no multiplica bien
 #   Producto de matrices
-            -   Para hace esto correctamente unicamente usar @ en vez de *<br>
-            print(A@B)
+-   Para hace esto correctamente unicamente usar @ en vez de * <br>
+    print(A@B)
 #   Transpuesta de una matriz
-            -   Para esto usar A.T
+-   Para esto usar A.T
 #   Inversa de una Matriz
-    np.linalg.inv(A)
+-   np.linalg.inv(A)
 #   Determinante de una Matriz
-    np.linalg.det(A)
+-   np.linalg.det(A)
 
 Consejo <br>
--   Para reondear en nmupy:
+-   Para reondear en numpy:
     -   Usar np.round(El numero, la cantidad de decimales a redondear)
+
+#   Polinomios
+ahora usaremos la libreria de python sympy con: <br>
+from sympy import *
+-   Para nombrar simbolos usar la palabra clave symbols('nombre dle simbolo')
+-   Ejemplo: <br>
+    from sympy import*
+    x = symbols('x')
+    x
+-   esto devuelve x como un simbolo de ecuacion
+-   Para mostrar varias ecuaciones a la vez usar display('aqui van el resto de comandos') <br>
+    no basta con hacer llamadas independientes como el ejemplo anterior <br>
+    ya que sympy unicamente guarda la ultima ecuacion llamada
+-   OJO: puedes usar print pero esto no saldra con simbolos,<br> 
+    talvez te confundas con la forma tradicional de python
+-   Para expandir cualquier ecuacion usar la parabra clave expand(aqui llamas a tu variable que guarde la ecuacion)
+-   Para reemplazar variables en una ecuacion usar subs(tu ecuacion, el valor de la variable)
+-   Si tenemos dos ecuaciones como una P y otra Q podemos usar el comando div(P,Q) esto devolvera un par ordenado <br>
+    donde la primera parte es el cocience de esa division y la segunda es el residuo de la division de esas ecuaciones
+    -   Para acceder al cociente solamente usar div(P,Q)[0] y para el residuo [1]
