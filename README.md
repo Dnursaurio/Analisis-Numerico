@@ -3,7 +3,7 @@
 primero importamos la libreria numpy
 import numpy as np
 
-#   Potenciacion y Otras operaciones de Python Nunpy
+#   Potenciacion y Otras operaciones de Python Numpy
 - Para poder hacer potenciacion:
     - np.power(base,exponente)
     - normalmente en python es:
