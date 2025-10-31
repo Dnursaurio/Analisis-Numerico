@@ -1,9 +1,9 @@
-# Analisis-Numerico
+#   Analisis-Numerico
 
 primero importamos la libreria numpy
 import numpy as np
 
-"Potenciacion"
+#   Potenciacion
 - Para poder hacer potenciacion:
     - np.power(base,exponente)
     - normalmente en python es:
